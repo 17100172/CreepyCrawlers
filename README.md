@@ -1,7 +1,11 @@
 > Summary:
 Use the arrow keys to control the green caterpillar. Eating a bus increases a caterpillar’s length by 1 unit but not more than 4 units. If the green caterpillar collides with the purple caterpillar head-on, if its length is greater than the purple caterpillar, it eats the purple caterpillar and gains 1 unit length. If any caterpillar collides with the other caterpillar at a right angle from behind, it cuts off that caterpillar’s length. Eating a bus gains the player 5 points, eating a caterpillar 10 points and cutting the other caterpillar’s length gets him 0 points.
+
+
 > Usage:
 Start the game by clicking on the runme.m file. A GUI will open. Click on ‘Start’, choose the level of difficulty and start playing the game using the arrow keys.
+
+
 > Programming:
 I started off with taking a screenshot of the background of the game and editing it to make a grid. The background was a map with roads and building. The caterpillars and buses could only move on the roads. I figured that using if conditions in the code for x and y coordinates of the caterpillars and the buses to keep them on the roads would be an excessively lengthy process. So instead I edited the background to make a grid of 40x40 pixel units. Similarly I created a corresponding double array of the grid that represented roads by 1 and building by 0. So, for each iteration I checked if the position of each handle after adding the velocity fell into a 1 or a 0 and calculated the velocity accordingly.
 Next I structured my code in a single while loop in a way that all the structures in the grid moved one complete unit and then checked the velocities of all the structures and if the coordinates of the heads of the caterpillars collided with each other, each other’s length or a bus.
